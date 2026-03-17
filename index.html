@@ -4,101 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whisq — Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            background: #FAF9F7;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F8F8F8;
             color: #1A1A1A;
             line-height: 1.7;
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 80px 24px 120px;
+
+        /* ── Header bar ─────────────────────────────── */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(248, 248, 248, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid #EDEBE9;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .brand {
+        .header-brand {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 700;
             color: #1A1A1A;
             letter-spacing: -0.5px;
-            margin-bottom: 4px;
+            text-decoration: none;
         }
-        .brand-sub {
+        .header-nav a {
             font-size: 14px;
+            font-weight: 500;
             color: #9A9490;
-            margin-bottom: 56px;
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover,
+        .header-nav a.active {
+            color: #E8480D;
+        }
+
+        /* ── Content ────────────────────────────────── */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 64px 24px 120px;
+        }
+        .page-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #E8480D;
+            margin-bottom: 16px;
         }
         h1 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-bottom: 8px;
             letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 8px;
         }
         .effective {
             font-size: 14px;
             color: #C8C2BE;
             margin-bottom: 48px;
         }
+
+        /* ── TLDR card ──────────────────────────────── */
+        .tldr {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 48px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .tldr-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #C8C2BE;
+            margin-bottom: 8px;
+        }
+        .tldr p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #1A1A1A;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ── Sections ───────────────────────────────── */
         h2 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-top: 40px;
-            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+            margin-top: 48px;
+            margin-bottom: 16px;
         }
         p {
             font-size: 16px;
             color: #444;
             margin-bottom: 16px;
-            font-weight: 300;
+            line-height: 1.7;
         }
-        .highlight {
-            background: #FFF5F2;
-            border-left: 3px solid #E8480D;
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 24px 0;
-        }
-        .highlight p {
-            margin-bottom: 0;
-            font-weight: 400;
+        strong {
+            font-weight: 600;
             color: #1A1A1A;
         }
-        .divider {
-            width: 40px;
-            height: 2px;
-            background: #EDEBE9;
-            margin: 48px 0;
+
+        /* ── Service cards ──────────────────────────── */
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
+        .service-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 4px;
+        }
+        .service-desc {
+            font-size: 14px;
+            color: #9A9490;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        /* ── Links ──────────────────────────────────── */
         a { color: #E8480D; text-decoration: none; }
         a:hover { text-decoration: underline; }
+
+        /* ── Footer ─────────────────────────────────── */
         .footer {
             margin-top: 64px;
-            padding-top: 32px;
+            padding-top: 24px;
             border-top: 1px solid #EDEBE9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer p {
             font-size: 13px;
             color: #C8C2BE;
+            margin-bottom: 0;
+        }
+        .footer a {
+            font-size: 13px;
+            color: #C8C2BE;
+        }
+        .footer a:hover { color: #E8480D; }
+
+        /* ── Responsive ─────────────────────────────── */
+        @media (max-width: 480px) {
+            .container { padding: 40px 20px 80px; }
+            h1 { font-size: 28px; }
+            .header-nav a { margin-left: 16px; font-size: 13px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="brand">Whisq</div>
-        <div class="brand-sub">Your personal cookbook</div>
+    <div class="header">
+        <a href="/" class="header-brand">Whisq</a>
+        <div class="header-nav">
+            <a href="/" class="active">Privacy</a>
+            <a href="/fond-privacy/terms.html">Terms</a>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="page-label">Legal</div>
         <h1>Privacy Policy</h1>
         <p class="effective">Effective March 17, 2026</p>
 
-        <div class="highlight">
-            <p>The short version: We collect only what's needed to make Whisq work. We don't sell your data. We don't show you ads. Your recipes are yours.</p>
+        <div class="tldr">
+            <div class="tldr-label">The short version</div>
+            <p>We collect only what's needed to make Whisq work. We don't sell your data. We don't show you ads. Your recipes are yours.</p>
         </div>
 
         <h2>What We Collect</h2>
@@ -107,15 +204,28 @@
         <p>We also temporarily process video URLs you submit in order to extract recipe content. The URLs are sent to our server, which fetches publicly available video transcripts and uses AI to structure them into recipes.</p>
 
         <h2>Analytics & Crash Reporting</h2>
-        <p>We use a self-hosted analytics system to understand how the app is used (for example, which features are popular and where users encounter issues). This data is stored on our own infrastructure and is never shared with third parties.</p>
-        <p>We use <strong>Sentry</strong> for crash reporting, which helps us detect and fix bugs. Sentry receives error data and basic device information when the app crashes. No advertising or ad-tracking services are used.</p>
+        <p>We use a self-hosted analytics system to understand how the app is used — for example, which features are popular and where users run into issues. This data is stored on our own infrastructure and is never shared with third parties.</p>
+        <p>We use Sentry for crash reporting, which helps us detect and fix bugs. Sentry receives error data and basic device information when the app crashes. No advertising or ad-tracking services are used.</p>
 
         <h2>Third-Party Services</h2>
-        <p>Whisq uses the following third-party services to function:</p>
-        <p><strong>Supabase</strong> — hosts our database and handles authentication. Your account data and recipes are stored on Supabase's servers.</p>
-        <p><strong>OpenAI</strong> — we use their Whisper API to transcribe audio when video captions aren't available. Audio is sent to OpenAI for processing and is not retained by them after transcription.</p>
-        <p><strong>Anthropic</strong> — we use their Claude API to extract structured recipe data from video transcripts. Transcript text is sent to Anthropic for processing.</p>
-        <p><strong>Sentry</strong> — receives crash reports and error diagnostics to help us fix bugs.</p>
+        <p>Whisq uses the following services to function:</p>
+
+        <div class="service-card">
+            <div class="service-name">Supabase</div>
+            <p class="service-desc">Hosts our database and handles authentication. Your account data and recipes are stored on Supabase's servers.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-name">OpenAI</div>
+            <p class="service-desc">We use their Whisper API to transcribe audio when video captions aren't available. Audio is sent to OpenAI for processing and is not retained by them after transcription.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-name">Anthropic</div>
+            <p class="service-desc">We use their Claude API to extract structured recipe data from video transcripts. Transcript text is sent to Anthropic for processing.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-name">Sentry</div>
+            <p class="service-desc">Receives crash reports and error diagnostics to help us identify and fix bugs quickly.</p>
+        </div>
 
         <h2>How We Use Your Data</h2>
         <p>Your data is used exclusively to provide the Whisq cooking experience — storing your recipes, maintaining your rankings, and syncing across sessions. We do not sell, rent, or share your personal data with anyone for marketing or advertising purposes.</p>
@@ -124,7 +234,7 @@
         <p>Your data is stored securely on Supabase's cloud infrastructure with row-level security policies, meaning only you can access your own recipes and reviews. All data transmission happens over HTTPS.</p>
 
         <h2>Your Rights</h2>
-        <p>You can delete your account and all associated data at any time from the Settings screen in the app. You can also delete individual recipes from your cookbook within the app. For any additional requests, contact us at the email below.</p>
+        <p>You can delete your account and all associated data at any time from the Settings screen in the app. You can also delete individual recipes from your cookbook. For any additional requests, contact us at the email below.</p>
 
         <h2>Children's Privacy</h2>
         <p>Whisq is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
@@ -136,7 +246,8 @@
         <p>Questions about this policy? Reach out at <a href="mailto:cookwithWhisq@gmail.com">cookwithWhisq@gmail.com</a></p>
 
         <div class="footer">
-            <p>© 2026 Whisq. Made with care.</p>
+            <p>&copy; 2026 Whisq</p>
+            <a href="/fond-privacy/terms.html">Terms of Service</a>
         </div>
     </div>
 </body>
