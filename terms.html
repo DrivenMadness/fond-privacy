@@ -4,95 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whisq — Terms of Service</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            background: #FAF9F7;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F8F8F8;
             color: #1A1A1A;
             line-height: 1.7;
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 80px 24px 120px;
+
+        /* ── Header bar ─────────────────────────────── */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(248, 248, 248, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid #EDEBE9;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .brand {
+        .header-brand {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 700;
             color: #1A1A1A;
             letter-spacing: -0.5px;
-            margin-bottom: 4px;
+            text-decoration: none;
         }
-        .brand-sub {
+        .header-nav a {
             font-size: 14px;
+            font-weight: 500;
             color: #9A9490;
-            margin-bottom: 56px;
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover,
+        .header-nav a.active {
+            color: #E8480D;
+        }
+
+        /* ── Content ────────────────────────────────── */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 64px 24px 120px;
+        }
+        .page-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #E8480D;
+            margin-bottom: 16px;
         }
         h1 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-bottom: 8px;
             letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 8px;
         }
         .effective {
             font-size: 14px;
             color: #C8C2BE;
             margin-bottom: 48px;
         }
+
+        /* ── TLDR card ──────────────────────────────── */
+        .tldr {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 48px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .tldr-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #C8C2BE;
+            margin-bottom: 8px;
+        }
+        .tldr p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #1A1A1A;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ── Sections ───────────────────────────────── */
         h2 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-top: 40px;
-            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+            margin-top: 48px;
+            margin-bottom: 16px;
         }
         p {
             font-size: 16px;
             color: #444;
             margin-bottom: 16px;
-            font-weight: 300;
+            line-height: 1.7;
         }
-        .highlight {
-            background: #FFF5F2;
-            border-left: 3px solid #E8480D;
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 24px 0;
-        }
-        .highlight p {
-            margin-bottom: 0;
-            font-weight: 400;
+        strong {
+            font-weight: 600;
             color: #1A1A1A;
         }
+
+        /* ── Rule list ──────────────────────────────── */
+        .rule-list {
+            background: #FFFFFF;
+            border-radius: 14px;
+            padding: 8px 0;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .rule-item {
+            padding: 12px 20px;
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .rule-item:not(:last-child) {
+            border-bottom: 1px solid #F4F2F0;
+        }
+        .rule-icon {
+            color: #E8480D;
+            font-size: 14px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ── Links ──────────────────────────────────── */
         a { color: #E8480D; text-decoration: none; }
         a:hover { text-decoration: underline; }
+
+        /* ── Footer ─────────────────────────────────── */
         .footer {
             margin-top: 64px;
-            padding-top: 32px;
+            padding-top: 24px;
             border-top: 1px solid #EDEBE9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer p {
             font-size: 13px;
             color: #C8C2BE;
+            margin-bottom: 0;
+        }
+        .footer a {
+            font-size: 13px;
+            color: #C8C2BE;
+        }
+        .footer a:hover { color: #E8480D; }
+
+        /* ── Responsive ─────────────────────────────── */
+        @media (max-width: 480px) {
+            .container { padding: 40px 20px 80px; }
+            h1 { font-size: 28px; }
+            .header-nav a { margin-left: 16px; font-size: 13px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="brand">Whisq</div>
-        <div class="brand-sub">Your personal cookbook</div>
+    <div class="header">
+        <a href="/" class="header-brand">Whisq</a>
+        <div class="header-nav">
+            <a href="/fond-privacy/">Privacy</a>
+            <a href="/fond-privacy/terms.html" class="active">Terms</a>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="page-label">Legal</div>
         <h1>Terms of Service</h1>
         <p class="effective">Effective March 17, 2026</p>
 
-        <div class="highlight">
-            <p>By using Whisq, you agree to these terms. They're straightforward — use the app responsibly, and we'll do our best to keep it running well for you.</p>
+        <div class="tldr">
+            <div class="tldr-label">The short version</div>
+            <p>Use Whisq responsibly, and we'll do our best to keep it running well for you. Your content is yours. AI-extracted recipes may have errors — always use your own judgment when cooking.</p>
         </div>
 
         <h2>Using Whisq</h2>
@@ -108,11 +217,28 @@
 
         <h2>Acceptable Use</h2>
         <p>You agree not to:</p>
-        <p>— Use Whisq to violate any laws or regulations</p>
-        <p>— Attempt to access other users' data or accounts</p>
-        <p>— Abuse, overload, or interfere with our services</p>
-        <p>— Use automated tools to scrape or bulk-extract content through Whisq</p>
-        <p>— Reverse engineer or attempt to extract the source code of the app</p>
+        <div class="rule-list">
+            <div class="rule-item">
+                <span class="rule-icon">&times;</span>
+                <span>Use Whisq to violate any laws or regulations</span>
+            </div>
+            <div class="rule-item">
+                <span class="rule-icon">&times;</span>
+                <span>Attempt to access other users' data or accounts</span>
+            </div>
+            <div class="rule-item">
+                <span class="rule-icon">&times;</span>
+                <span>Abuse, overload, or interfere with our services</span>
+            </div>
+            <div class="rule-item">
+                <span class="rule-icon">&times;</span>
+                <span>Use automated tools to scrape or bulk-extract content through Whisq</span>
+            </div>
+            <div class="rule-item">
+                <span class="rule-icon">&times;</span>
+                <span>Reverse engineer or attempt to extract the source code of the app</span>
+            </div>
+        </div>
 
         <h2>Service Availability</h2>
         <p>We aim to keep Whisq available and reliable, but we don't guarantee uninterrupted service. We may modify, suspend, or discontinue features at any time. We'll do our best to give notice for significant changes.</p>
@@ -133,7 +259,8 @@
         <p>Questions about these terms? Reach out at <a href="mailto:cookwithWhisq@gmail.com">cookwithWhisq@gmail.com</a></p>
 
         <div class="footer">
-            <p>© 2026 Whisq. Made with care.</p>
+            <p>&copy; 2026 Whisq</p>
+            <a href="/fond-privacy/">Privacy Policy</a>
         </div>
     </div>
 </body>
